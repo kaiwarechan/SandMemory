@@ -19,7 +19,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    mainImageView.image = [UIImage imageNamed:@"utapuri.jpg"];//image入れる
+    mainImageView.image = [UIImage imageNamed:@"utapuri.jpg"];//imageいれる
 }
 
 - (void)didReceiveMemoryWarning
