@@ -21,6 +21,7 @@
 		1B235AC41978193F002095FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B235AA61978193F002095FF /* UIKit.framework */; };
 		1B235ACC1978193F002095FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B235ACA1978193F002095FF /* InfoPlist.strings */; };
 		1B235ACE1978193F002095FF /* SandMemoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B235ACD1978193F002095FF /* SandMemoryTests.m */; };
+		1B235AD8197AB7CF002095FF /* utapuri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B235AD7197AB7CF002095FF /* utapuri.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1B235AC91978193F002095FF /* SandMemoryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SandMemoryTests-Info.plist"; sourceTree = "<group>"; };
 		1B235ACB1978193F002095FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B235ACD1978193F002095FF /* SandMemoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandMemoryTests.m; sourceTree = "<group>"; };
+		1B235AD7197AB7CF002095FF /* utapuri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = utapuri.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		1B235AA81978193F002095FF /* SandMemory */ = {
 			isa = PBXGroup;
 			children = (
+				1B235AD7197AB7CF002095FF /* utapuri.jpg */,
 				1B235AB11978193F002095FF /* AppDelegate.h */,
 				1B235AB21978193F002095FF /* AppDelegate.m */,
 				1B235AB41978193F002095FF /* Main.storyboard */,
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B235AD8197AB7CF002095FF /* utapuri.jpg in Resources */,
 				1B235ABB1978193F002095FF /* Images.xcassets in Resources */,
 				1B235AAD1978193F002095FF /* InfoPlist.strings in Resources */,
 				1B235AB61978193F002095FF /* Main.storyboard in Resources */,

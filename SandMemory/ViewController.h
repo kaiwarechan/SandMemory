@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    
+    IBOutlet UIImageView *mainImageView;
+    IBOutlet UIImageView *currentImageView;
+    
+    UIImage *reizedImage;
+    
+    NSMutableArray *averageRGBArray;
+    
+    NSMutableArray *views;
+    
+}
 
 @end
