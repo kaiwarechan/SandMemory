@@ -19,7 +19,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    mainImageView.image = [UIImage imageNamed:@"utapuri.jpg"];//imageいれる
+    mainImageView.image = [UIImage imageNamed:@"utapuri.png"];//imageいれる
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,12 +103,11 @@
             b = *(pixelPtr + 0);  // 青
             
             //NSLog(@"x:%d y:%d R:%d G:%d B:%d", checkX, checkY, r, g, b);
+            
+            int averageRGB = (int)r + (int)g + (int)b;
+            averageRGB = averageRGB / 3;
+            [averageRGBArray addObject:[NSNumber numberWithInt:averageRGB]];
         }
-        
-        int averageRGB = (int)r + (int)g + (int)b;
-        averageRGB = averageRGB / 3;
-        [averageRGBArray addObject:[NSNumber numberWithInt:averageRGB]];
-        
     }
     CFRelease(dataRef);
     
@@ -117,7 +116,7 @@
     //
     //    return averageRGB;
     
-    NSLog(@"array is %@", averageRGBArray);
+    //NSLog(@"array is %@", averageRGBArray);
 }
 
 
