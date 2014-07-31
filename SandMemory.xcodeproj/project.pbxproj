@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B11D0F0197AC09E0052E205 /* utapuri.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B11D0EF197AC09E0052E205 /* utapuri.png */; };
 		1B235AA31978193F002095FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B235AA21978193F002095FF /* Foundation.framework */; };
 		1B235AA51978193F002095FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B235AA41978193F002095FF /* CoreGraphics.framework */; };
 		1B235AA71978193F002095FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B235AA61978193F002095FF /* UIKit.framework */; };
@@ -22,6 +21,8 @@
 		1B235AC41978193F002095FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B235AA61978193F002095FF /* UIKit.framework */; };
 		1B235ACC1978193F002095FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B235ACA1978193F002095FF /* InfoPlist.strings */; };
 		1B235ACE1978193F002095FF /* SandMemoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B235ACD1978193F002095FF /* SandMemoryTests.m */; };
+		1BFC24CE1989E76500922281 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFC24CD1989E76500922281 /* AssetsLibrary.framework */; };
+		1BFC24D7198A07E100922281 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFC24D6198A07E100922281 /* Image.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B11D0EF197AC09E0052E205 /* utapuri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utapuri.png; sourceTree = "<group>"; };
 		1B235A9F1978193F002095FF /* SandMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B235AA21978193F002095FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B235AA41978193F002095FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +55,9 @@
 		1B235AC91978193F002095FF /* SandMemoryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SandMemoryTests-Info.plist"; sourceTree = "<group>"; };
 		1B235ACB1978193F002095FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B235ACD1978193F002095FF /* SandMemoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandMemoryTests.m; sourceTree = "<group>"; };
+		1BFC24CD1989E76500922281 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		1BFC24D5198A07E100922281 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		1BFC24D6198A07E100922281 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BFC24CE1989E76500922281 /* AssetsLibrary.framework in Frameworks */,
 				1B235AA51978193F002095FF /* CoreGraphics.framework in Frameworks */,
 				1B235AA71978193F002095FF /* UIKit.framework in Frameworks */,
 				1B235AA31978193F002095FF /* Foundation.framework in Frameworks */,
@@ -103,6 +107,7 @@
 		1B235AA11978193F002095FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1BFC24CD1989E76500922281 /* AssetsLibrary.framework */,
 				1B235AA21978193F002095FF /* Foundation.framework */,
 				1B235AA41978193F002095FF /* CoreGraphics.framework */,
 				1B235AA61978193F002095FF /* UIKit.framework */,
@@ -114,12 +119,13 @@
 		1B235AA81978193F002095FF /* SandMemory */ = {
 			isa = PBXGroup;
 			children = (
-				1B11D0EF197AC09E0052E205 /* utapuri.png */,
 				1B235AB11978193F002095FF /* AppDelegate.h */,
 				1B235AB21978193F002095FF /* AppDelegate.m */,
 				1B235AB41978193F002095FF /* Main.storyboard */,
 				1B235AB71978193F002095FF /* ViewController.h */,
 				1B235AB81978193F002095FF /* ViewController.m */,
+				1BFC24D5198A07E100922281 /* Image.h */,
+				1BFC24D6198A07E100922281 /* Image.m */,
 				1B235ABA1978193F002095FF /* Images.xcassets */,
 				1B235AA91978193F002095FF /* Supporting Files */,
 			);
@@ -231,7 +237,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B11D0F0197AC09E0052E205 /* utapuri.png in Resources */,
 				1B235ABB1978193F002095FF /* Images.xcassets in Resources */,
 				1B235AAD1978193F002095FF /* InfoPlist.strings in Resources */,
 				1B235AB61978193F002095FF /* Main.storyboard in Resources */,
@@ -254,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B235AB91978193F002095FF /* ViewController.m in Sources */,
+				1BFC24D7198A07E100922281 /* Image.m in Sources */,
 				1B235AB31978193F002095FF /* AppDelegate.m in Sources */,
 				1B235AAF1978193F002095FF /* main.m in Sources */,
 			);
