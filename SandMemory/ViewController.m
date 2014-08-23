@@ -253,70 +253,42 @@
                 [self.view addSubview:imageView];
                 
                 
+                
+                 
             }
         }
         
     }
-    //    [self savePhotoPng:imgView.image];
     
-    
-    
+    [self save];
 }
 
--(IBAction)saved{
-    
-    // スクリーンショットの画像と、ステータスバーの画像
-    UIImage *savedImage = /*上記の実装で取得した画像*/
-    
-    // 合成したいサイズを指定して、描画を開始します
+- (UIImage *)captureView {
+    //hide controls if needed
+    //CGRect rect = [self.view bounds];
     UIGraphicsBeginImageContext(CGSizeMake(320, 320));
-    
-    // まずは最下位レイヤーにしたいスクリーンショット画像をレンダリングします。
-    [Image drawAtPoint:CGPointMake(0, 0)];
-    
-    // 上記2枚を描画した内容をUIImageとして受け取ります。
-    savedImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    // 描画を終了します。
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [self.view.layer renderInContext:context];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
-    // UIImageからNSDataに変換する。
-    // 変換する際に、PNGとしてNSDataを作成します。
-    UIImage *image = /*何らかのイメージ画像 */
-    NSData *data = UIImagePNGRepresentation(image);
-    
-    // 今回は、Cacheディレクトリに、sample.pngというファイル名で保存します。
-    NSArray *array = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    NSString *cacheDirPath = [array objectAtIndex:0];
-    NSString *filePath = [cacheDirPath stringByAppendingPathComponent:@"mosaic.png"];
-    
-    // 保存処理を呼び出し、sample.pngとして保存します。
-    if ([data writeToFile:filePath atomically:YES]) {
-        NSLog(@"OK");
-    } else {
-        NSLog(@"Error");
-    }
+    return img;
+}
+
+-(void)save{
+    ALAssetsLibrary *savelibrary = [[ALAssetsLibrary alloc] init];
+    [savelibrary writeImageToSavedPhotosAlbum:[self captureView].CGImage
+                                     metadata:nil
+                              completionBlock:^(NSURL *assetURL, NSError *error){
+                                  if(!error){
+                                      NSLog(@"保存成功");
+                                  }
+                                  
+                              }];
     
 }
 
 
-//
-//-(void)savePhotoPng:(UIImage*)orizinalSizeImage{
-//    NSData *imageData = UIImagePNGRepresentation(orizinalSizeImage);
-//    UIImage *imageView = [UIImage imageWithData:imageData];
-//    UIImageWriteToSavedPhotosAlbum(imageView, self, @selector(targetImage:didFinishSavingWithError:contextInfo:), nil);
-//}
-//
-////画像の保存完了時に呼ばれるメソッド
-//-(void)targetImage:(UIImage*)image
-//didFinishSavingWithError:(NSError*)error contextInfo:(void*)context{
-//
-//    if(error){
-//        // 保存失敗時
-//    }else{
-//        // 保存成功時
-//    }
-//}
+
 
 
 
