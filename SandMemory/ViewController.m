@@ -86,10 +86,10 @@
                                //カメラロール内のすべてのアルバムが列挙される
                                if (group) {
                                    
-                                   //アルバム名がTestと同一だった時の処理
+                                   //アルバム名がMosaicと同一だった時の処理
                                    if ([AlbumName compare:[group valueForProperty:ALAssetsGroupPropertyName]] == NSOrderedSame) {
                                        
-                                       //Test内の画像を取得する
+                                       //Mosaic内の画像を取得する
                                        ALAssetsGroupEnumerationResultsBlock assetsEnumerationBlock = ^(ALAsset *result, NSUInteger index, BOOL *stop) {
                                            
                                            if (result) {
